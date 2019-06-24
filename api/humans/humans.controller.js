@@ -57,7 +57,7 @@ module.exports = {
             }
         }
         if(flag) {
-            res.status(200).json({message: humanName + " Not Found In System!"});
+            res.status(200).json({message: humanName + " Not Exist In System!", data:[]});
         } else {
             res.status(200).json({message: humanName + "'s Pets List", data: data});
         }
