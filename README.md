@@ -1,3 +1,7 @@
+### Dependencies
+* node js
+* npm
+
 clone the project
 
 
