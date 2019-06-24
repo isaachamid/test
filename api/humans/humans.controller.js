@@ -45,8 +45,10 @@ module.exports = {
     pets: (req, res) => {
         const humanName = req.params.humanName;
         let data;
+        let flag = true;
         for (var i in humans) {
             if (humans[i].name.toUpperCase() == humanName.toUpperCase()) {
+                flag = false;
                 if (humans[i].name.toUpperCase() == 'JANE' && humans[i].age > 30) {
                     data = 0;
                 } else {
@@ -54,6 +56,10 @@ module.exports = {
                 }
             }
         }
-        res.status(200).json({ message: humanName + "'s Pets List", data : data});
+        if(flag) {
+            res.status(200).json({message: humanName + " Not Found In System!"});
+        } else {
+            res.status(200).json({message: humanName + "'s Pets List", data: data});
+        }
     },
 }
