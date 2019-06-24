@@ -1,4 +1,4 @@
-##clone the project
+clone the project
 
 ### Installations
 npm install
