@@ -1,4 +1,6 @@
+// Define your Controllers
 const Human = require('./humans.model');
+// Static Data
 const humans = [
     {
         'name' : 'Jack',
